@@ -1,0 +1,169 @@
+How To Print In Java
+Hello there. Let us quickly recap what we discussed in the video. Along the way, we may learn something new as well.
+          
+     RECAP:
+          1. System.out.print and System.out.println are the two commands which are used in JAVA for printing output to console.
+          2. 'System.out.print' command prints to the console while 'System.out.println' prints and then moves to next line as well.
+          3. '/n' can also be used to move to the next line. 
+         4. System.out.println does nothing more than printing the message and then printing '/n' after that.
+          
+      FACTS:
+          Printing numbers does not requires double inverted commas. Try this and find out yourself.
+          System.out.print("10") and System.out.print(10) will have the same output.
+          
+      EXERCISE:
+          Now that we know what it takes to print a right angled triangle, let us meditate on what changes will be required to print an equilateral triangle. Try the code in your code-book and make notes in your notebook. 
+       
+      ADVICE:
+          1. Plan. Plan to avoid distractions. 
+          2. Focus. Try hard to stay in the activity.
+          3. Meditate. Stay mindful of what your are doing. Bring yourself back if you are distracted.
+
+Variables In Java
+Hello there. Let us quickly recap what we discussed in the video. Along the way, we may learn something new as well.
+          
+      RECAP:
+          1. To declare a variable you need to know it's data type as well.
+          2. When you declare a variable, say, int x = 10; a location in computer's RAM is named x and 10 is stored in it.
+          3. / gives quotient and % gives remainder.
+          4. There is no BODMAS. *, %, / have equal priority and higher than + and - which are equal to each other.
+          5. Among operators with equal prirority, generally the one on the left is executed first.
+          6. use parenthesis to over-ride order of execution of operators.
+          
+      FACTS:
+          1. There is no operator for exponentiation. 2 ^ 3 is not 8. This is XOR operator. We'll do it later. 
+          2. To do exponentiation use Math.pow function. 
+          
+      EXERCISE:
+          1. Try this code in the codebook and meditate on it.
+  
+                           System.out.println(Math.pow(2, 3));
+  
+          2. Try this code in the codebook and meditate on it.
+  
+                           int exp = (int)Math.pow(2, 3);
+                           System.out.println(exp);
+  
+          3. Compare the ouput of above two and think why the above code has a (int) before Math.pow and what it does?
+       
+      ADVICE:
+          1. Reminder on plan, focus and meditate. 
+          2. Plan to avoid distractions, make it less likely to be distracted. 
+          3. Focus while in the activity. Try hard to not leave it and do something else till the planned activity is done. 
+          4. Meditate to stay mindful of the wandering mind. Keep bringing it back to where it should be.
+Conditionals
+Hello there. We'll quickly summarize the video, learn a couple new tricks and move on.
+        
+              RECAP:
+        	        1. if-else statements are used to execute statements based on conditions. if the condition is true, if block gets executed otherwise  else block gets executed
+        	        2. For more than two conditions, we can use nested if-else or "if, else-if, else" stack.
+         	        3. In the "if, else-if, else" stack, block following the first truth is executed and rest is ignored. If all conditions are false, else block is executed
+         
+              FACTS:
+         	        1.'=' is used to assign a value to a variable whereas '==' is used to check the value of a variable.
+        	        2. To combine more than one condition in an if clause we can use logical operators - AND (&&), OR (||) and Not(!) e.g.
+        	        	       
+    to check if a number is a multiple of both 2 and 3 we can use && (true only if both conditions are true)
+        	        	        	        if((num % 2 == 0) && (num % 3 == 0))
+    
+    to check if a number is multiple of either 2 or 3 or both we can use || (false only if both conditions are false)
+        	        	        	        if((num % 2 == 0) || (num % 3 == 0))
+    
+    to negate a condition, we can use !
+        	        	        	        if(!(num > 10)) is same as saying if (num <= 10)
+    
+        	        3.  If "ONLY ONE STATEMENT" is to be executed after the condition is true, there is no need create a block for the single line.  The following two yield same results.
+   // Part1
+         	        	        if(n%2==0)
+         	         	        	        System.out.println("Number is even")
+  
+   // Part2
+         	        	        if(n%2==0){
+         	         	        	        System.out.println("Number is even")
+         	        	        }
+   
+              EXERCISE:
+                1. Meditate whether an if clause containing multiple conditions combined by && operator need to evaluate rest of the conditions if first conditions is false.
+                2. Meditate whether an if clause containing multiple conditions combined by || operator need to evaluate rest of the conditions if first conditions is true.
+               
+              ADVICE:
+                  1. Love yourself. 
+        	          2. In case if you fail to focus and stay in the study, accept the past failure and forgive yourself. CLEAN THE SLATE.
+        	          3. Cleaning the slate is the starting point for potential future progress.
+Loops
+Hello there. We'll quickly revise the video and learn a few new tricks.
+          
+      RECAP:
+          1. Loops are used to perform block of statements repeatedly. They are executed till the condition holds true.
+          2. There are 4 types of loops out of which we discussed 2 in this video - for and while
+          3. While loop is executed only till the condition holds true. Separate statements are required to initialise the variable and increment the variable. In this loop, the conditions are verified before the statements are executed.
+    
+            Structure:
+            int i = 1; // initialise variable
+            while(i <= 10){
+                System.out.println(i);
+                i++; // increment variable
+            }
+    
+          4. In for loops, initiation, verification and increment are all done in the same statement. The order in which these operations takes places are: 1. Initiation -> 2. Evaluation -> 3. Execution -> 4. Increment ->234.. The block of statements are executed only till the condition holds true.
+    
+            Structure:
+            for(int i = 1; i <= 10; i++){
+                System.out.println(i);
+            }
+    
+            The first part of statement is known as Initialization. (int i = 1), the second part is known as Evaluation . (i <= 10), the last part is known as increment. (i++)
+          
+      FACTS:
+        1. "do while" loop
+            A third loop which is seldom used is the "do while" loop. In this loop, the block of statements are first executed and then the while condition is checked, just the opposite of while loop. In this loop, the block is executed at-least once as opposed by the other two loops.
+    
+            Structure:
+            int i = 1;
+            do{
+                System.out.println(i);
+                i++;
+            }while(i <= 10);
+    
+        2. Post Increment and Pre Increment
+    
+        Frequently, you would be encountering statements such as i++, i--, ++i or --i.
+        The former two statements are known as post increments/decrements while the latter two are known as pre increments/decrements.
+    
+        i++ and ++i is equivalent to i = i + 1.
+        i-- and --i is equivalent to i = i - 1.
+        i++ increments the value of 'i' by 1 but still uses the original value.
+        ++i first increments the value of 'i' and then uses the value of the variable.
+    
+        For example
+        int i = 10;
+        y = i++; // (Post increment)
+        In this case, the initial value of 'i' is 10. The variable y is then assigned the value of 'i' i.e. 10 and the increases the value of 10. The final values of 'i' and 'y' would be 11 and 10 respectively.
+    
+        ----------------------------------------------------------------------------------------
+        int i = 10;
+        y = ++i; // (Pre Increment)
+        The initial value of 'i' is 10.  The value of 'i' is first incremented and then assigned to the variable y. The final values of 'i' and 'y' would be 11 and 11 respectively.
+          
+      EXERCISE:
+        1. Below is a code written with a for loop. Study the code and guess what would be the output or is it even a valid code.  What do you deduce from this?
+    
+            int i = 10;
+            for( ;i <= 10; ){
+                System.out.println(i)
+                i++;
+            }
+    
+        2. Try running this code, try to find what is wrong with it
+            int i = 1;
+            while(i <= 10);
+            {
+                System.out.println(i)
+                i++;
+            }
+    
+      ADVICE:
+        1. The most common mistakes which tend to happen are infinite loops when using a while loop. Students initialize a variable but forget to increment it. In this way, the condition for the loop is always true and becomes an infinite loop.
+        2. Dream, Direction and Discipline. These three put together can help you realise your best self.
+        3. Coding is not like eating sweets. Instead it is much like running, gyming, playing guitar, singing a song. You won't get fun out of it easily. You will need to earn the fun. Once you start finding it fun, you'll find that every effort you put was worth it.
+                 
